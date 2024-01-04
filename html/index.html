@@ -2,12 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="./skin/styles.css">
         <title>Oops, I wet my plants again.</title>
     </head>
 
     <body>
-        <h1>PlantsWetter</h1>
-        <img src="./images/pexels-anna-shvets.png">
-        <a href="pages/about.html">About</a>
+        <div class="header"> 
+            <div style="display:flex;align-items:center;">
+                <img src="./images/Logo.svg" height=40, width=auto, alt="PlantsWetter logo">
+                <h1>PlantsWetter</h1>
+            </div>
+            <div>
+                <img src="./images/logged_in.png" height=40, width=auto, alt="Logged in hamburger">
+            </div>
+        </div>
+        
+        <div class="hero_section">
+            <div class="hero_column">
+                <h2>A support group for people who wet their plants.</h2>
+                <div><button>Share your story!</button></div>
+            </div>
+            <div class="hero_column">
+                <img src="./images/pexels-anna-shvets.jpg" alt="A photo of someone who wets snake plants." style="border-radius: 100%;">
+            </div>
+        </div>
+        <div class="header" style="justify-content: left;">
+            <img src="./images/Logo.svg" height=25, width=auto, alt="PlantsWetter logo">
+            <h3>Featured Plants Wetters</h3>
+        </div>
+        <div class="featured">
+            <img src="./images/featured_1.jpg" alt="First featured plants wetter">
+            <img src="./images/featured_2.jpg" alt="Second featured plants wetter">
+            <img src="./images/featured_3.jpg" alt="Third featured plants wetter">
+        </div>
+        <a href="bones/about.html">About</a>
     </body>
 </html>
