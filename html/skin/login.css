@@ -1,0 +1,260 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    /* outline: 1px solid red; */
+}
+p, label {
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt_light);
+}
+.content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content, .logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* left side */
+
+.picture {
+    background-image: url(../images/login_page_photo.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+}
+.logo {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    top: 5vh;
+    gap: 1vw;
+    padding: 15px 0;
+
+    justify-content: center;
+    align-items: center;
+}
+.whale {
+    height: 10vh;
+}
+
+/* right side */
+
+.right {
+    width: 60vw;
+    background-color: var(--txt_dark);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.dummy-text {
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.2rem;
+}
+.remote-text {
+    margin: 40px 0 80px;
+}
+
+/* form */
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+input {
+    background-color: var(--txt_dark);
+    border: 2px solid var(--txt_light);
+    border-radius: 5px;
+    color: var(--txt_light);
+    padding: 4px;
+}
+input:focus {
+    outline: none;
+    border: 2px solid var(--blue);
+}
+button {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid var(--blue);
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover {
+    background-color: var(--blue);
+    color: black;
+}
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* Toggle Switch */
+/* https://bytewebster.com/frontendprojects/login-signup-form-javascript-css */
+
+.slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 30vw;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 2px solid var(--txt_light);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+::selection{
+    background: #1a75ff;
+    color: var(--txt_light);
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: var(--txt_light);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: var(--green);
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 10px;
+  background: var(--blue);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: var(--txt_light);
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: var(--green);
+}
+#login:checked ~ label.signup{
+  color: var(--green);
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+
+@media only screen and (max-width: 650px)  {
+    .content{
+        flex-flow: column;
+        height: auto;
+        text-align: center;
+    }
+    .picture{
+        display: flex;
+        background-size: 100vh;
+        height: 100vh;
+        width: auto;
+    }
+    .logo{
+        width: 100vw;
+        position: static;
+        gap: 10px;
+    }
+    .logo img, h1{
+        position: relative;
+        top: -40vh;
+    }
+    .right{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0);
+    }
+    .remote-text{
+        padding: 20px 0;
+        margin: 0;
+    }
+    .form{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .input{
+        text-align: left;
+        width: auto;
+        font-size: 0.9em;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    input{
+        font-size: 0.9rem;
+        height: 1.5rem;
+        width: 70vw;
+        background-color: var(--txt_light);
+        color: var(--txt_dark);
+        border: 2px solid var(--green);
+    }
+    .button, .log-in{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    button{
+        margin-bottom: 0px;
+        width: 60vw;
+        padding: 10px 5px;
+    }
+    .slide-controls {
+        border: 2px solid var(--green);
+    }
+    label{
+        color: var(--txt_dark);
+    }
+}
+

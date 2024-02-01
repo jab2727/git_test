@@ -1,10 +1,18 @@
 /* * {
-    border: 2px solid red;
+    outline: 1px solid red;
   } */
+
+:root{
+    --blue: #008CC1;
+    --green: #379683;
+    --txt_light: white;
+    --txt_dark: rgb(40, 40, 40);
+}
 
 body {
     /* Without this there's a margin of 8px on chrome.*/
     margin: 0px;
+    padding: 0px;
 }
 
 h1, h2, h4 {
@@ -46,13 +54,11 @@ button {
     color: white;
     font-weight: bold;
     border: 1px solid #008CC1;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     width: 33%;
-    min-width: 120px;
+    min-width: max-content;
     white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .hero_section, .footer {
@@ -65,10 +71,10 @@ button {
     border: 0px;
 }
 
-img {
+/* img {
     max-width: 100%;
     max-height: 100%;
-}
+} */
 
 .hero_column {
     border-radius: 0px;
@@ -93,7 +99,6 @@ img {
 }
 
 .featured{
-    flex-wrap: wrap;
     margin-top: -5px;
     justify-content: space-around;
 }
@@ -105,8 +110,8 @@ img {
 }
 
 .feature_box img{
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -115,4 +120,10 @@ img {
     justify-content: space-between;
     flex-direction: row;
     padding: 0px 5px;
+}
+
+.hero_column img {
+    border-radius: 100%;
+    height: auto;
+    width: 100%;
 }

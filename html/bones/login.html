@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../skin/styles.css">
+    <link rel="stylesheet" href="../skin/login.css">
+    <title>Log In/Sign Up</title>
+    
+</head>
+<body>
+    <div class="content">
+        <div class="picture">
+            <div class="logo">
+                <img src="../images/Logo.svg" alt="logo" class="whale" style="filter: invert(0);">
+                <h1>PlantsWetter</h1>
+            </div>
+        </div>
+        <div class="right">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+            <form action="#">
+                <div class="form">
+                    <div class="input">
+                        <label for="user-name">User name</label>
+                        <input type="text" name="user-name" id="user-name" required="" autocomplete="username">
+                    </div>
+                    
+                    <div class="input hidden">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required="" autocomplete="email">
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" name="passwor" id="password" required="" autocomplete="current-password">
+                    </div>
+                    
+                    <div class="input hidden">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required="" autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="exposed">Log In</button>
+                    <button type="submit" class="hidden">Sign up</button>
+                    <button type="submit" class="exposed">Reset Password</button>
+                </div>
+            </form>
+            
+        </div>
+
+    </div>
+</body>
+<script src="../brains/login.js"></script>
+</html>
