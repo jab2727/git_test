@@ -1,0 +1,45 @@
+#container{
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px auto;
+}
+
+#dashboard{
+    background-color: var(--green);
+    grid-row: 1/3;
+}
+
+#toolbar{
+    grid-column: 2/4;
+}
+
+#viewport{
+    background-color: var(--light);
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+ul {
+    list-style-type: none;    
+}
+
+li {
+    color: var(--txt_light)
+}
+
+#logo{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+#logo img{
+
+}
+#logo h1{
+    color: var(--txt_light);
+
+}
